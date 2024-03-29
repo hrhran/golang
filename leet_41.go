@@ -1,3 +1,7 @@
+package main
+
+import "fmt"
+
 func firstMissingPositive(nums []int) int {
     n := len(nums)
     dir := make(map[int]bool)
@@ -13,4 +17,11 @@ func firstMissingPositive(nums []int) int {
         }
     }
     return n + 1
+}
+
+func main() {
+	nums := []int{1, 2, 0}
+	fmt.Println(firstMissingPositive(nums))
+	nums = []int{3, 4, -1, 1}
+	fmt.Println(firstMissingPositive(nums))
 }
